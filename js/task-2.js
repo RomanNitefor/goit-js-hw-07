@@ -19,10 +19,6 @@ images.forEach(image => {
   const img = document.createElement('img');
   img.src = image.url;
   img.alt = image.alt;
-  img.style.width = '360px';
-  img.style.height = '300px';
   li.append(img);
   listImages.append(li);
 });
-
-console.log('listImages:', listImages);

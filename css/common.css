@@ -36,13 +36,24 @@ body {
   line-height: 1.5;
 }
 
-.gallery {
+/* .gallery {
   display: flex;
   gap: 24px;
   list-style-type: none;
   align-items: center;
   justify-content: center;
   margin-top: 100px;
+} */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.gallery {
+  display: flex;
+  gap: 24px;
+  width: 1128px;
+  padding: 50px 20px;
 }
 .categories-list {
 }
@@ -272,15 +283,9 @@ body {
 
 .generate-result {
   display: flex;
-  flex-direction: row;
-
   gap: 44px;
   padding: 32px;
   background-color: #f6f6fe;
   border-radius: 8px;
-  overflow-x: auto;
-}
-.generate-new {
-  display: flex;
-  flex-shrink: 0;
+  flex-wrap: wrap;
 }
