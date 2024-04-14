@@ -10,17 +10,22 @@ const boxesDiv = document.getElementById('boxes');
 const input = controlsDiv.querySelector('input');
 
 function createBoxes(amount) {
+  if (amount < 1 || amount > 100) {
+    return;
+  }
   let size = 30;
   boxesDiv.innerHTML = '';
+  let listBoxes = [];
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxesDiv.appendChild(box);
     size += 10;
     box.classList.add('generate-new');
+    listBoxes.push(box);
   }
+  listBoxes.forEach(box => boxesDiv.appendChild(box));
   input.value = '';
 }
 

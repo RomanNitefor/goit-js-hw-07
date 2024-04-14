@@ -14,11 +14,10 @@ const images = [
 ];
 const listImages = document.querySelector('.gallery');
 
+let pictures = '';
+
 images.forEach(image => {
-  const li = document.createElement('li');
-  const img = document.createElement('img');
-  img.src = image.url;
-  img.alt = image.alt;
-  li.append(img);
-  listImages.append(li);
+  pictures += `<li><img src="${image.url}" alt="${image.alt}"></li>`;
 });
+
+listImages.innerHTML = pictures;
