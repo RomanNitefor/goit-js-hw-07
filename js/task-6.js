@@ -25,7 +25,7 @@ function createBoxes(amount) {
     box.classList.add('generate-new');
     listBoxes.push(box);
   }
-  listBoxes.forEach(box => boxesDiv.appendChild(box));
+  boxesDiv.append(...listBoxes);
   input.value = '';
 }
 
